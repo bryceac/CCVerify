@@ -42,6 +42,8 @@ class ViewController: UIViewController {
         
         updateBackgroundColor(withRed: 0, green: 0, blue: 0) // give color view a black background
         updateTextColor(withRed: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0) // make text color white
+        
+        getValues() // get default values
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,10 +72,21 @@ class ViewController: UIViewController {
             redSlider.value = Float(Int(redValue.text!)!/255)
             redSlider.value = Float(Int(redValue.text!)!/255)
             redSlider.value = Float(Int(redValue.text!)!/255)
+        } else {
+            let RGB = UIColor(cgColor: colorView.layer.backgroundColor!).rgb()
+            
+            redValue.text = "\(RGB?.red ?? 0)"
+            greenValue.text = "\(RGB?.green ?? 0)"
+            blueValue.text = "\(RGB?.blue ?? 0)"
+            
+            redSlider.value = Float(Int(redValue.text!)!/255)
+            redSlider.value = Float(Int(redValue.text!)!/255)
+            redSlider.value = Float(Int(redValue.text!)!/255)
         }
     }
     
     @IBAction func indexChanged(_ sender: UISegmentedControl) {
+        getValues()
     }
     
     
