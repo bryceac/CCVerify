@@ -138,7 +138,6 @@ class ViewController: UIViewController {
                 updateTextColor(withRed: CGFloat(Int(redValue.text!)!/255), green: CGFloat(Int(greenValue.text!)!/255), blue: CGFloat(Int(blueValue.text!)!/255))
                 getValues()
             }
-            sender.resignFirstResponder()
         case 3:
             let HEX = removePoundSign(from: hexCode.text!)
             let RGB = rgbHex.hexToRGB(hex: HEX) // get RGB values from hex
@@ -155,7 +154,6 @@ class ViewController: UIViewController {
                 updateTextColor(withRed: CGFloat(Int(redValue.text!)!/255), green: CGFloat(Int(greenValue.text!)!/255), blue: CGFloat(Int(blueValue.text!)!/255))
                 getValues()
             }
-            sender.resignFirstResponder()
         default: ()
         }
     }
