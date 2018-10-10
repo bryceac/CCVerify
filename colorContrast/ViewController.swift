@@ -70,8 +70,8 @@ class ViewController: UIViewController {
             blueValue.text = "\(RGB?.blue ?? 0)"
             
             redSlider.value = Float(Int(redValue.text!)!/255)
-            redSlider.value = Float(Int(redValue.text!)!/255)
-            redSlider.value = Float(Int(redValue.text!)!/255)
+            greenSlider.value = Float(Int(redValue.text!)!/255)
+            blueSlider.value = Float(Int(redValue.text!)!/255)
         } else {
             let RGB = UIColor(cgColor: colorView.layer.backgroundColor!).rgb()
             
@@ -80,8 +80,8 @@ class ViewController: UIViewController {
             blueValue.text = "\(RGB?.blue ?? 0)"
             
             redSlider.value = Float(Int(redValue.text!)!/255)
-            redSlider.value = Float(Int(redValue.text!)!/255)
-            redSlider.value = Float(Int(redValue.text!)!/255)
+            greenSlider.value = Float(Int(redValue.text!)!/255)
+            blueSlider.value = Float(Int(redValue.text!)!/255)
         }
     }
     
