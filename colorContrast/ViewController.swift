@@ -72,9 +72,9 @@ class ViewController: UIViewController {
             greenValue.text = "\(RGB?.green ?? 0)"
             blueValue.text = "\(RGB?.blue ?? 0)"
             
-            redSlider.value = Float(Int(redValue.text!)!/255)
-            greenSlider.value = Float(Int(greenValue.text!)!/255)
-            blueSlider.value = Float(Int(blueValue.text!)!/255)
+            redSlider.value = Float(Int(redValue.text!)!)/Float(255)
+            greenSlider.value = Float(Int(greenValue.text!)!)/Float(255)
+            blueSlider.value = Float(Int(blueValue.text!)!)/Float(255)
             
             hexCode.text = "#\(rgbHex.rgbToHex(red: Int(redValue.text!)!, green: Int(greenValue.text!)!, blue: Int(blueValue.text!)!))"
         } else {
@@ -84,9 +84,9 @@ class ViewController: UIViewController {
             greenValue.text = "\(RGB?.green ?? 0)"
             blueValue.text = "\(RGB?.blue ?? 0)"
             
-            redSlider.value = Float(Int(redValue.text!)!/255)
-            greenSlider.value = Float(Int(greenValue.text!)!/255)
-            blueSlider.value = Float(Int(blueValue.text!)!/255)
+            redSlider.value = Float(Int(redValue.text!)!)/Float(255)
+            greenSlider.value = Float(Int(greenValue.text!)!)/Float(255)
+            blueSlider.value = Float(Int(blueValue.text!)!)/Float(255)
             
             hexCode.text = "#\(rgbHex.rgbToHex(red: Int(redValue.text!)!, green: Int(greenValue.text!)!, blue: Int(blueValue.text!)!))"
         }
@@ -117,7 +117,7 @@ class ViewController: UIViewController {
     }
     
     // the following function will remove '#' from string, so conversion can be right
-    /* func removePoundSign(from: String) -> String {
+    func removePoundSign(from: String) -> String {
         if from.contains("#") {
             var hex = Array(from)
             hex.removeFirst()
@@ -125,10 +125,10 @@ class ViewController: UIViewController {
         } else {
             return from
         }
-    } */
+    }
     
     // function that will run when user changes data in text fields
-    /* @IBAction func dataChanged(_ sender: UITextField) {
+    @IBAction func dataChanged(_ sender: UITextField) {
         switch sender.tag {
         case 0, 1, 2:
             if colorAreaController.selectedSegmentIndex == 0 {
@@ -151,7 +151,7 @@ class ViewController: UIViewController {
             }
         default: ()
         }
-    } */
+    }
     
     
     
