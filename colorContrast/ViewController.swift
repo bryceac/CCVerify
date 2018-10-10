@@ -72,8 +72,8 @@ class ViewController: UIViewController {
             blueValue.text = "\(RGB?.blue ?? 0)"
             
             redSlider.value = Float(Int(redValue.text!)!/255)
-            greenSlider.value = Float(Int(redValue.text!)!/255)
-            blueSlider.value = Float(Int(redValue.text!)!/255)
+            greenSlider.value = Float(Int(greenValue.text!)!/255)
+            blueSlider.value = Float(Int(blueValue.text!)!/255)
             
             hexCode.text = "#\(rgbHex.rgbToHex(red: Int(redValue.text!)!, green: Int(greenValue.text!)!, blue: Int(blueValue.text!)!))"
         } else {
@@ -84,8 +84,8 @@ class ViewController: UIViewController {
             blueValue.text = "\(RGB?.blue ?? 0)"
             
             redSlider.value = Float(Int(redValue.text!)!/255)
-            greenSlider.value = Float(Int(redValue.text!)!/255)
-            blueSlider.value = Float(Int(redValue.text!)!/255)
+            greenSlider.value = Float(Int(greenValue.text!)!/255)
+            blueSlider.value = Float(Int(blueValue.text!)!/255)
             
             hexCode.text = "#\(rgbHex.rgbToHex(red: Int(redValue.text!)!, green: Int(greenValue.text!)!, blue: Int(blueValue.text!)!))"
         }
