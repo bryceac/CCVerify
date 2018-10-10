@@ -25,6 +25,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let COLOR_AREA_OPTIONS: [String] = ["Background", "Text"] // segment control text array
+        
+        colorAreaController.removeAllSegments() // remove premade segments
+        
+        // populate segment controller with those in array
+        for i in 0..<COLOR_AREA_OPTIONS.count {
+            colorAreaController.insertSegment(withTitle: COLOR_AREA_OPTIONS[i], at: i, animated: false)
+        }
+        
+        colorView.layer.borderColor = UIColor.black.cgColor // create a black border
+        colorView.layer.borderWidth = 5 // set border width to 5
+        colorView.layer.cornerRadius = 10 // give corners a radius of 10
+        
+        updateBackgroundColor(withRed: 0, green: 0, blue: 0) // give color view a black background
+        updateTextColor(withRed: 255.0, green: 255.0, blue: 255.0) // make text color white
     }
 
     override func didReceiveMemoryWarning() {
