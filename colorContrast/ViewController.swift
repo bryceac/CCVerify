@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var blueSlider: UISlider!
     @IBOutlet weak var blueValue: UITextField!
     @IBOutlet weak var hexCode: UITextField!
+    let rgbHex: RGBHex = RGBHex() // add object of class, so that functions can be used
     
     
     
@@ -72,6 +73,8 @@ class ViewController: UIViewController {
             redSlider.value = Float(Int(redValue.text!)!/255)
             greenSlider.value = Float(Int(redValue.text!)!/255)
             blueSlider.value = Float(Int(redValue.text!)!/255)
+            
+            hexCode.text = "#\(rgbHex.rgbToHex(red: Int(redValue.text!)!, green: Int(greenValue.text!)!, blue: Int(blueValue.text!)!))"
         } else {
             let RGB = UIColor(cgColor: colorView.layer.backgroundColor!).rgb()
             
@@ -82,6 +85,8 @@ class ViewController: UIViewController {
             redSlider.value = Float(Int(redValue.text!)!/255)
             greenSlider.value = Float(Int(redValue.text!)!/255)
             blueSlider.value = Float(Int(redValue.text!)!/255)
+            
+            hexCode.text = "#\(rgbHex.rgbToHex(red: Int(redValue.text!)!, green: Int(greenValue.text!)!, blue: Int(blueValue.text!)!))"
         }
     }
     
