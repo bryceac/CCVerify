@@ -115,6 +115,15 @@ class ViewController: UIViewController {
         }
     }
     
+    // the following function will remove '#' from string, so conversion can be right
+    func removePoundSign(from: String) {
+        
+    }
+    
+    // function that will run when user changes data in text fields
+    @IBAction func dataChanged(_ sender: UITextField) {
+    }
+    
     
     
 }
