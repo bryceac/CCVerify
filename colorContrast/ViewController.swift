@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         colorView.layer.cornerRadius = 10 // give corners a radius of 10
         
         updateBackgroundColor(withRed: 0, green: 0, blue: 0) // give color view a black background
-        updateTextColor(withRed: 255.0, green: 255.0, blue: 255.0) // make text color white
+        updateTextColor(withRed: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0) // make text color white
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,15 +49,17 @@ class ViewController: UIViewController {
     
     // updateBackgrounColor is used to change the background color of the preview
     func updateBackgroundColor(withRed: CGFloat, green: CGFloat, blue: CGFloat) {
-        colorView.layer.backgroundColor = UIColor(red: withRed/255, green: green/255, blue: blue/255, alpha: 1).cgColor
+        colorView.layer.backgroundColor = UIColor(red: withRed, green: green, blue: blue, alpha: 1).cgColor
     }
     
     func updateTextColor(withRed: CGFloat, green: CGFloat, blue: CGFloat) {
-        textView.textColor = UIColor(red: withRed/255, green: green/255, blue: blue/255, alpha: 1)
+        textView.textColor = UIColor(red: withRed, green: green, blue: blue, alpha: 1)
     }
     
     // reset function is a function that will set things back to the default values
     @IBAction func reset(_ sender: UIButton) {
+        updateBackgroundColor(withRed: 0, green: 0, blue: 0) // give color view a black background
+        updateTextColor(withRed: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0) // make text color white
     }
     
 }
