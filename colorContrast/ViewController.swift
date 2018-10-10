@@ -94,6 +94,7 @@ class ViewController: UIViewController {
     @IBAction func reset(_ sender: UIButton) {
         updateBackgroundColor(withRed: 0, green: 0, blue: 0) // give color view a black background
         updateTextColor(withRed: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0) // make text color white
+        getValues()
     }
     
 }
