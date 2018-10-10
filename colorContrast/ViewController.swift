@@ -62,6 +62,7 @@ class ViewController: UIViewController {
         textView.textColor = UIColor(red: withRed, green: green, blue: blue, alpha: 1)
     }
     
+    // getValues function updates the field appropiately, in order to give accurate info
     func getValues() {
         if colorAreaController.selectedSegmentIndex == 1 {
             let RGB = textView.textColor.rgb()
@@ -101,6 +102,10 @@ class ViewController: UIViewController {
         updateTextColor(withRed: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0) // make text color white
         getValues()
     }
+    @IBAction func valueChanged(_ sender: UISlider) {
+    }
+    
+    
     
 }
 
