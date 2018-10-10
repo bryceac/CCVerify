@@ -142,16 +142,11 @@ class ViewController: UIViewController {
             let HEX = removePoundSign(from: hexCode.text!)
             let RGB = rgbHex.hexToRGB(hex: HEX) // get RGB values from hex
             
-            // retrieve RGB values from array
-            redValue.text = String(RGB[0])
-            greenValue.text = String(RGB[1])
-            blueValue.text = String(RGB[2])
-            
             if colorAreaController.selectedSegmentIndex == 0 {
-                updateBackgroundColor(withRed: CGFloat(Int(redValue.text!)!/255), green: CGFloat(Int(greenValue.text!)!/255), blue: CGFloat(Int(blueValue.text!)!/255))
+                updateBackgroundColor(withRed: CGFloat(RGB[0]/255), green: CGFloat(RGB[1]/255), blue: CGFloat(RGB[2]/255))
                 getValues()
             } else {
-                updateTextColor(withRed: CGFloat(Int(redValue.text!)!/255), green: CGFloat(Int(greenValue.text!)!/255), blue: CGFloat(Int(blueValue.text!)!/255))
+                updateTextColor(withRed: CGFloat(RGB[0]/255), green: CGFloat(RGB[1]/255), blue: CGFloat(RGB[2]/255))
                 getValues()
             }
         default: ()
