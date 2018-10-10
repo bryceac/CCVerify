@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eMR-j8-bIj">
-                                <rect key="frame" x="35" y="42" width="250" height="396"/>
+                                <rect key="frame" x="26.5" y="42" width="267" height="396"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="TAM-av-OV3">
-                                        <rect key="frame" x="5" y="0.0" width="240" height="171"/>
+                                        <rect key="frame" x="13.5" y="0.0" width="240" height="171"/>
                                         <subviews>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vNK-dr-bzJ">
                                                 <rect key="frame" x="59.5" y="0.0" width="121" height="29"/>
@@ -51,45 +51,45 @@
                                             </view>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nes-Mz-Ubg">
-                                        <rect key="frame" x="0.0" y="186" width="250" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nes-Mz-Ubg">
+                                        <rect key="frame" x="0.0" y="186" width="267" height="30"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="NMr-2A-b0B">
-                                                <rect key="frame" x="-2" y="0.0" width="214" height="31"/>
+                                                <rect key="frame" x="-2" y="0.0" width="226" height="31"/>
                                                 <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </slider>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0My-Wb-ukP">
-                                                <rect key="frame" x="225" y="0.0" width="25" height="30"/>
+                                                <rect key="frame" x="242" y="0.0" width="25" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tTv-WR-rwh">
-                                        <rect key="frame" x="4" y="231" width="242" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tTv-WR-rwh">
+                                        <rect key="frame" x="4" y="231" width="259" height="30"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Oxf-ZV-AYL">
-                                                <rect key="frame" x="-2" y="0.0" width="206" height="31"/>
+                                                <rect key="frame" x="-2" y="0.0" width="218" height="31"/>
                                                 <color key="minimumTrackTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </slider>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="otL-vT-cxz">
-                                                <rect key="frame" x="217" y="0.0" width="25" height="30"/>
+                                                <rect key="frame" x="234" y="0.0" width="25" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KMN-LQ-j5U">
-                                        <rect key="frame" x="8" y="276" width="234" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KMN-LQ-j5U">
+                                        <rect key="frame" x="8" y="276" width="251" height="30"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="G0T-tq-SMp">
-                                                <rect key="frame" x="-2" y="0.0" width="198" height="31"/>
+                                                <rect key="frame" x="-2" y="0.0" width="210" height="31"/>
                                                 <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </slider>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oeV-lX-FS0">
-                                                <rect key="frame" x="209" y="0.0" width="25" height="30"/>
+                                                <rect key="frame" x="226" y="0.0" width="25" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -97,7 +97,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="DsN-zS-fJP">
-                                        <rect key="frame" x="105.5" y="321" width="39" height="75"/>
+                                        <rect key="frame" x="114" y="321" width="39" height="75"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tyn-8p-NlL">
                                                 <rect key="frame" x="7" y="0.0" width="25" height="30"/>
