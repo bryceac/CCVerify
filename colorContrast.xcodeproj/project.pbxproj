@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02633BDD216DAC8E0013E708 /* rgbHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02633BDC216DAC8E0013E708 /* rgbHex.swift */; };
 		027B6E5C216D894C001845F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027B6E5B216D894C001845F0 /* AppDelegate.swift */; };
 		027B6E5E216D894C001845F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027B6E5D216D894C001845F0 /* ViewController.swift */; };
 		027B6E61216D894C001845F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027B6E5F216D894C001845F0 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02633BDC216DAC8E0013E708 /* rgbHex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rgbHex.swift; sourceTree = "<group>"; };
 		027B6E58216D894C001845F0 /* colorContrast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = colorContrast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		027B6E5B216D894C001845F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		027B6E5D216D894C001845F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		027B6E5A216D894C001845F0 /* colorContrast */ = {
 			isa = PBXGroup;
 			children = (
+				02633BDC216DAC8E0013E708 /* rgbHex.swift */,
 				027B6E5B216D894C001845F0 /* AppDelegate.swift */,
 				027B6E5D216D894C001845F0 /* ViewController.swift */,
 				027B6E5F216D894C001845F0 /* Main.storyboard */,
@@ -265,6 +268,7 @@
 				027B6E5E216D894C001845F0 /* ViewController.swift in Sources */,
 				027B6E8A216D9BEC001845F0 /* uiRGB.swift in Sources */,
 				027B6E5C216D894C001845F0 /* AppDelegate.swift in Sources */,
+				02633BDD216DAC8E0013E708 /* rgbHex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
