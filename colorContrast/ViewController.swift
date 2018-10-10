@@ -91,6 +91,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // indexChanged runs, when segment view is changed
     @IBAction func indexChanged(_ sender: UISegmentedControl) {
         getValues()
     }
@@ -102,7 +103,16 @@ class ViewController: UIViewController {
         updateTextColor(withRed: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0) // make text color white
         getValues()
     }
+    
+    // valueChanged updates things when user moves slider
     @IBAction func valueChanged(_ sender: UISlider) {
+        if colorAreaController.selectedSegmentIndex == 0 {
+            updateBackgroundColor(withRed: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value))
+            getValues()
+        } else {
+            updateTextColor(withRed: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value))
+            getValues()
+        }
     }
     
     
