@@ -66,19 +66,21 @@ class ViewController: UIViewController {
     // getValues function updates the field appropiately, in order to give accurate info
     func getValues() {
         if colorAreaController.selectedSegmentIndex == 1 {
-            let RGB = textView.textColor.rgb()
+            let RGB = textView.textColor.rgb() // retrieve RGB values from UIColor
             
-            redValue.text = "\(RGB?.red ?? 0)"
-            greenValue.text = "\(RGB?.green ?? 0)"
-            blueValue.text = "\(RGB?.blue ?? 0)"
+            redValue.text = "\(RGB?.red ?? 0)" // put red number in the red field
+            greenValue.text = "\(RGB?.green ?? 0)" // put green number in the green field
+            blueValue.text = "\(RGB?.blue ?? 0)" // put blue number in the blue field
             
+            // put RGB values onto slider each number is casted to a Float individually for math to be right.
             redSlider.value = Float(Int(redValue.text!)!)/Float(255)
             greenSlider.value = Float(Int(greenValue.text!)!)/Float(255)
             blueSlider.value = Float(Int(blueValue.text!)!)/Float(255)
             
+            // retrieve color hex code and put it in Hex code field
             hexCode.text = "#\(rgbHex.rgbToHex(red: Int(redValue.text!)!, green: Int(greenValue.text!)!, blue: Int(blueValue.text!)!))"
         } else {
-            let RGB = UIColor(cgColor: colorView.layer.backgroundColor!).rgb()
+            let RGB = UIColor(cgColor: colorView.layer.backgroundColor!).rgb() // convert CGColor to UIColor and get RGB values
             
             redValue.text = "\(RGB?.red ?? 0)"
             greenValue.text = "\(RGB?.green ?? 0)"
@@ -92,7 +94,7 @@ class ViewController: UIViewController {
         }
     }
     
-    // indexChanged runs, when segment view is changed
+    // indexChanged runs, when segment view is changed and makes sure the fields show the right values
     @IBAction func indexChanged(_ sender: UISegmentedControl) {
         getValues()
     }
@@ -129,6 +131,7 @@ class ViewController: UIViewController {
     
     // function that will run when user changes data in text fields
     @IBAction func dataChanged(_ sender: UITextField) {
+        // use switch statement to update colors appropriately based on the field. case 3 is the hex code field and 0-2 are the RGB values
         switch sender.tag {
         case 0, 1, 2:
             if colorAreaController.selectedSegmentIndex == 0 {
