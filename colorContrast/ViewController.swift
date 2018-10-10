@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController {
     @IBOutlet weak var colorAreaController: UISegmentedControl!
@@ -116,12 +117,46 @@ class ViewController: UIViewController {
     }
     
     // the following function will remove '#' from string, so conversion can be right
-    func removePoundSign(from: String) {
-        
+    func removePoundSign(from: String) -> String {
+        if from.contains("#") {
+            var hex = Array(from)
+            hex.removeFirst()
+            return String(hex)
+        } else {
+            return from
+        }
     }
     
     // function that will run when user changes data in text fields
     @IBAction func dataChanged(_ sender: UITextField) {
+        // initiate switch statement to apply correct logic 3 is the hex code field
+        switch sender.tag {
+        case 0, 1, 2:
+            if colorAreaController.selectedSegmentIndex == 0 {
+                updateBackgroundColor(withRed: CGFloat(Int(redValue.text!)!/255), green: CGFloat(Int(greenValue.text!)!/255), blue: CGFloat(Int(blueValue.text!)!/255))
+                getValues()
+            } else {
+                updateTextColor(withRed: CGFloat(Int(redValue.text!)!/255), green: CGFloat(Int(greenValue.text!)!/255), blue: CGFloat(Int(blueValue.text!)!/255))
+                getValues()
+            }
+        case 3:
+            let HEX = removePoundSign(from: hexCode.text!)
+            let RGB = rgbHex.hexToRGB(hex: HEX) // get RGB values from hex
+            
+            // retrieve RGB values from array
+            redValue.text = String(RGB[0])
+            greenValue.text = String(RGB[1])
+            blueValue.text = String(RGB[2])
+            
+            if colorAreaController.selectedSegmentIndex == 0 {
+                updateBackgroundColor(withRed: CGFloat(Int(redValue.text!)!/255), green: CGFloat(Int(greenValue.text!)!/255), blue: CGFloat(Int(blueValue.text!)!/255))
+                getValues()
+            } else {
+                updateTextColor(withRed: CGFloat(Int(redValue.text!)!/255), green: CGFloat(Int(greenValue.text!)!/255), blue: CGFloat(Int(blueValue.text!)!/255))
+                getValues()
+            }
+        default: ()
+        }
     }
     
     
