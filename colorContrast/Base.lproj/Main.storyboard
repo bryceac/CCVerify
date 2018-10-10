@@ -30,6 +30,9 @@
                                                     <segment title="First"/>
                                                     <segment title="Second"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="indexChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="erx-R2-2SA"/>
+                                                </connections>
                                             </segmentedControl>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Rq-of-olR">
                                                 <rect key="frame" x="0.0" y="43" width="240" height="128"/>

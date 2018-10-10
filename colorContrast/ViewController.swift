@@ -59,6 +59,22 @@ class ViewController: UIViewController {
         textView.textColor = UIColor(red: withRed, green: green, blue: blue, alpha: 1)
     }
     
+    func getValues() {
+        if colorAreaController.selectedSegmentIndex == 1 {
+            let RGB = textView.textColor.rgb()
+            
+            redValue.text = "\(RGB?.red ?? 0)"
+            greenValue.text = "\(RGB?.green ?? 0)"
+            blueValue.text = "\(RGB?.blue ?? 0)"
+            
+            redSlider.value = Float(Int(redValue.text!)!/255)
+            redSlider.value = Float(Int(redValue.text!)!/255)
+            redSlider.value = Float(Int(redValue.text!)!/255)
+        }
+    }
+    
+    @IBAction func indexChanged(_ sender: UISegmentedControl) {
+    }
     
     
     // reset function is a function that will set things back to the default values
