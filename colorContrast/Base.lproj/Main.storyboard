@@ -33,23 +33,33 @@
                                             </segmentedControl>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Rq-of-olR">
                                                 <rect key="frame" x="0.0" y="43" width="240" height="128"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Preview" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3r-pX-bca">
+                                                        <rect key="frame" x="71.5" y="54.5" width="97" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
+                                                    <constraint firstItem="d3r-pX-bca" firstAttribute="centerY" secondItem="9Rq-of-olR" secondAttribute="centerY" id="6D7-qi-Q3b"/>
                                                     <constraint firstAttribute="height" constant="128" id="OwY-iA-9vK"/>
                                                     <constraint firstAttribute="width" constant="240" id="Qce-S7-94E"/>
+                                                    <constraint firstItem="d3r-pX-bca" firstAttribute="centerX" secondItem="9Rq-of-olR" secondAttribute="centerX" id="bWy-Um-O1z"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nes-Mz-Ubg">
-                                        <rect key="frame" x="11" y="186" width="218" height="30"/>
+                                        <rect key="frame" x="1" y="186" width="238" height="30"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="NMr-2A-b0B">
-                                                <rect key="frame" x="-2" y="0.0" width="182" height="31"/>
+                                                <rect key="frame" x="-2" y="0.0" width="202" height="31"/>
                                                 <color key="minimumTrackTintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </slider>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0My-Wb-ukP">
-                                                <rect key="frame" x="193" y="0.0" width="25" height="30"/>
+                                                <rect key="frame" x="213" y="0.0" width="25" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -57,14 +67,14 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tTv-WR-rwh">
-                                        <rect key="frame" x="15" y="231" width="210" height="30"/>
+                                        <rect key="frame" x="5" y="231" width="230" height="30"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Oxf-ZV-AYL">
-                                                <rect key="frame" x="-2" y="0.0" width="174" height="31"/>
+                                                <rect key="frame" x="-2" y="0.0" width="194" height="31"/>
                                                 <color key="minimumTrackTintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </slider>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="otL-vT-cxz">
-                                                <rect key="frame" x="185" y="0.0" width="25" height="30"/>
+                                                <rect key="frame" x="205" y="0.0" width="25" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -72,14 +82,14 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KMN-LQ-j5U">
-                                        <rect key="frame" x="19" y="276" width="202" height="30"/>
+                                        <rect key="frame" x="9" y="276" width="222" height="30"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="G0T-tq-SMp">
-                                                <rect key="frame" x="-2" y="0.0" width="166" height="31"/>
+                                                <rect key="frame" x="-2" y="0.0" width="186" height="31"/>
                                                 <color key="minimumTrackTintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </slider>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oeV-lX-FS0">
-                                                <rect key="frame" x="177" y="0.0" width="25" height="30"/>
+                                                <rect key="frame" x="197" y="0.0" width="25" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -98,6 +108,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RP-5q-2Ke">
                                                 <rect key="frame" x="0.0" y="45" width="39" height="30"/>
                                                 <state key="normal" title="Reset"/>
+                                                <connections>
+                                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qw3-Pk-nXV"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -111,6 +124,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="blueSlider" destination="G0T-tq-SMp" id="arW-m4-IQD"/>
+                        <outlet property="blueValue" destination="oeV-lX-FS0" id="iNG-eW-fpg"/>
+                        <outlet property="colorAreaController" destination="vNK-dr-bzJ" id="eFk-nI-7nG"/>
+                        <outlet property="colorView" destination="9Rq-of-olR" id="jAp-Fd-4gt"/>
+                        <outlet property="greenSlider" destination="Oxf-ZV-AYL" id="KPk-ZT-fNH"/>
+                        <outlet property="greenValue" destination="otL-vT-cxz" id="Fur-lZ-pNg"/>
+                        <outlet property="hexCode" destination="tyn-8p-NlL" id="7KO-Pw-ZAr"/>
+                        <outlet property="redSlider" destination="NMr-2A-b0B" id="O3n-ns-xbp"/>
+                        <outlet property="redValue" destination="0My-Wb-ukP" id="MMr-QG-Ync"/>
+                        <outlet property="textView" destination="d3r-pX-bca" id="tHD-dn-rSi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
