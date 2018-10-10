@@ -129,7 +129,6 @@ class ViewController: UIViewController {
     
     // function that will run when user changes data in text fields
     @IBAction func dataChanged(_ sender: UITextField) {
-        // initiate switch statement to apply correct logic 3 is the hex code field
         switch sender.tag {
         case 0, 1, 2:
             if colorAreaController.selectedSegmentIndex == 0 {
@@ -139,6 +138,7 @@ class ViewController: UIViewController {
                 updateTextColor(withRed: CGFloat(Int(redValue.text!)!/255), green: CGFloat(Int(greenValue.text!)!/255), blue: CGFloat(Int(blueValue.text!)!/255))
                 getValues()
             }
+            sender.resignFirstResponder()
         case 3:
             let HEX = removePoundSign(from: hexCode.text!)
             let RGB = rgbHex.hexToRGB(hex: HEX) // get RGB values from hex
@@ -155,6 +155,7 @@ class ViewController: UIViewController {
                 updateTextColor(withRed: CGFloat(Int(redValue.text!)!/255), green: CGFloat(Int(greenValue.text!)!/255), blue: CGFloat(Int(blueValue.text!)!/255))
                 getValues()
             }
+            sender.resignFirstResponder()
         default: ()
         }
     }
