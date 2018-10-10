@@ -34,6 +34,8 @@ class ViewController: UIViewController {
             colorAreaController.insertSegment(withTitle: COLOR_AREA_OPTIONS[i], at: i, animated: false)
         }
         
+        colorAreaController.selectedSegmentIndex = 0 // set default segment
+        
         colorView.layer.borderColor = UIColor.black.cgColor // create a black border
         colorView.layer.borderWidth = 5 // set border width to 5
         colorView.layer.cornerRadius = 10 // give corners a radius of 10
@@ -52,9 +54,12 @@ class ViewController: UIViewController {
         colorView.layer.backgroundColor = UIColor(red: withRed, green: green, blue: blue, alpha: 1).cgColor
     }
     
+    // updateTextColor function is used to update the color of the text
     func updateTextColor(withRed: CGFloat, green: CGFloat, blue: CGFloat) {
         textView.textColor = UIColor(red: withRed, green: green, blue: blue, alpha: 1)
     }
+    
+    
     
     // reset function is a function that will set things back to the default values
     @IBAction func reset(_ sender: UIButton) {
