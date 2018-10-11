@@ -1,0 +1,94 @@
+'''Name:''' CC Verify
+
+'''Author:''' Bryce Campbell
+
+'''Version:''' 1.0
+
+'''Description:''' Simple app that allows users to compare two different colors, to ensure readability on screens without the need for an Internet connection, and users can pick colors in any manner.
+
+'''License:''' See LICENSE
+
+==Questions==
+
+<ol>
+<li>
+<dl>
+<dt>'''Why create this app, when there are other ways to do the job?'''</dt>
+<dd>
+<p>Sometimes, it is hard to think of what colors goes well together, and the problem with many of the other solutions out there was that I did not know if I was influencing the text or the background, in addition to not being able to specify colors easily.</p>
+<p>I made this app so that I could have a quick and easy way to compare colors, whether I knew the RGB values, which are three numbers ranging from 0 to 255, if I knew only the Hex code for the colors, or I wanted to experiment with other colors, regardless of whether or not I had Internet, as well as not waste time with trial and error.</p>
+</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>'''Why the name CC Verify?'''</dt>
+<dd><p>Yes, it is not a great name, and I really wanted to call it something else that better reflected the functionality and purpose, but many of the names were taken, so I had to settle for this one. The two C's are meant to stand for Color Contrast and nothing else.</p></dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>'''Can I manipulate the Alpha (aka. opacity) in this app?'''</dt>
+<dd>
+<p>Codewise, the functionality is already there, and is possible, but it is not possible at this time.</p>
+<p>I might implement it in a minor update some day, but it is not a high priority, since I do not see alpha channels being used too much in designs meant for screens.</p>
+</dd>
+<li>
+<dl>
+<dt>'''Can I do gradients in this app?'''</dt>
+<dd>
+<p>No, gradients are not possible.</p> 
+<p>While I do see gradients being used a lot in designs these days, the text content is usually located in the top portion of a gradient, if not more along the center.</p>
+<p>Also, gradients use more than one color, so things will get crowded in the interface.</p>
+<p>My main focus with this app is to just keep things simple for the user.</p>
+</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>'''Can I export these colors to CSS or any other format?'''<dt>
+<dd>
+<p>No, and I do not really plan to. This app's main purpose is to allow people to quickly check if colors go well together for readability purposes.</p>
+<p>However, as long as the app is running, the RGB values and the hex code are always visible, with the hex code formatted in the manner needed for CSS, so you can take a screen shot or keep your device next to you while you work.</p>
+</dd>
+</dl>
+</li>
+<li>
+<dl>
+<dt>'''Do you plan to support CMYK or HSB color systems?'''</dt>
+<dd>
+<p>While this app <strong>can</strong> be used to help with pretty much any design, the main focus is for designs meant for the screen, which mainly use the RGB system, while CMYK used for print designs.</p>
+<p>HSB is just another way to specify colors, and is not one that I hear about or see too much outside of programs like Photoshop and Lightroom, so it would not be worth it.</p>
+<p>For the purposes of this app, RGB works out the best.</p>
+</dd>
+</dl>
+</li>
+</ol>
+
+==Notes==
+
+This app was made for iOS 11.2, but has only been tested on an iOs 12 device, so there may be problems.
+
+===Using App===
+
+The way to use this app is pretty much straight forward. You have a preview box with text inside and you use the sliders or text fields to influence the coloring.
+
+One can put RGB values (numbers ranging from 0 to 255) in the first three fields or a 6-character Hex code in the bottom most text field ('#' is allowed at the beginning or end, but will ignored, even though it is present most of the time).
+
+If one tries to use a 3-character hex, things will not likely work properly or at all, as the way I have the app generating and parsing hex values does not support the shorter format.
+
+At the very top, there is a segment controller that is used to ultimately determine what has its color changed, so that only one set of UI elements are ever needed to change anything.
+
+===Support===
+
+If you have any problems, please contact me at the address below.
+
+However, because I will not always be around a computer suitable for iOS development or have my iOS device on me, I might not be able to tackle things quickly.
+
+ios@brycecampbell.me
+
+Be sure to tell me what device you are using, what version of iOS you are running, and all the other necessary details, like the steps you performed that caused the error and what you were expecting.
+
+===Other===
+
+If you would like to personally help me make this app better, feel free to fork this project over on [https://github.com/bryceac/CCVerify Github]
