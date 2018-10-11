@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var colorAreaController: UISegmentedControl!
     @IBOutlet weak var colorView: UIView!
     @IBOutlet weak var textView: UILabel!
@@ -154,6 +154,12 @@ class ViewController: UIViewController {
             }
         default: ()
         }
+    }
+    
+    // func from UITextField delegate to try and dismiss keyboard
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // resign the first responder
+        return true
     }
     
     
