@@ -130,12 +130,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if from.contains("#") {
             var hex = Array(from)
             
-            // use for loop to remove '#'
-            for i in 0..<hex.count {
-                if hex[i] == "#" {
-                    hex.remove(at: i)
-                }
-            }
+            hex.remove(at: hex.index(where: { $0 == "#"})!) // remove from wherever it might be in string
             return String(hex)
         } else {
             return from
