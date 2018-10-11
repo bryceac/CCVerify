@@ -3,7 +3,7 @@
 //  colorContrast
 //
 //  Created by Bryce Campbell on 10/9/18.
-//  Copyright © 2018 Bryce Campbell. All rights reserved.
+//  Copyright © 2018 Bryce Campbell. See License for details on rights.
 //
 
 import UIKit
