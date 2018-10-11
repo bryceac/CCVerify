@@ -46,6 +46,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         updateTextColor(withRed: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0) // make text color white
         
         getValues() // get default values
+        
+        // set delegate for text fields
+        redValue.delegate = self
+        greenValue.delegate = self
+        blueValue.delegate = self
+        hexCode.delegate = self
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -156,7 +163,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    // func from UITextField delegate to try and dismiss keyboard
+    // function from UITextField delegate to try and dismiss keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder() // resign the first responder
         return true
