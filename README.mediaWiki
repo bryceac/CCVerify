@@ -23,7 +23,8 @@
 <li>
 <dl>
 <dt>'''Why the name CC Verify?'''</dt>
-<dd><p>Yes, it is not a great name, and I really wanted to call it something else that better reflected the functionality and purpose, but many of the names were taken, so I had to settle for this one. The two C's are meant to stand for Color Contrast and nothing else.</p></dd>
+<dd>
+<p>Yeah, it is not a great name, and I really wanted to call it something else that better reflected the functionality and purpose, but many of the names were taken, so I had to settle for this one. The two C's are meant to stand for Color Contrast and nothing else.</p></dd>
 </dl>
 </li>
 <li>
@@ -33,6 +34,7 @@
 <p>Codewise, the functionality is already there, and is possible, but it is not possible at this time.</p>
 <p>I might implement it in a minor update some day, but it is not a high priority, since I do not see alpha channels being used too much in designs meant for screens.</p>
 </dd>
+</dl>
 <li>
 <dl>
 <dt>'''Can I do gradients in this app?'''</dt>
