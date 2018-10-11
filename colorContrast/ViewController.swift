@@ -129,7 +129,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func removePoundSign(from: String) -> String {
         if from.contains("#") {
             var hex = Array(from)
-            hex.removeFirst()
+            
+            // use for loop to remove '#'
+            for i in 0..<hex.count {
+                if hex[i] == "#" {
+                    hex.remove(at: i)
+                }
+            }
             return String(hex)
         } else {
             return from
