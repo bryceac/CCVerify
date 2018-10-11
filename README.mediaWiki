@@ -10,33 +10,21 @@
 
 ==Questions==
 
-<ol>
-<li>
 <dl>
 <dt>'''Why create this app, when there are other ways to do the job?'''</dt>
 <dd>
 <p>Sometimes, it is hard to think of what colors goes well together, and the problem with many of the other solutions out there was that I did not know if I was influencing the text or the background, in addition to not being able to specify colors easily.</p>
 <p>I made this app so that I could have a quick and easy way to compare colors, whether I knew the RGB values, which are three numbers ranging from 0 to 255, if I knew only the Hex code for the colors, or I wanted to experiment with other colors, regardless of whether or not I had Internet, as well as not waste time with trial and error.</p>
 </dd>
-</dl>
-</li>
-<li>
-<dl>
 <dt>'''Why the name CC Verify?'''</dt>
 <dd>
-<p>Yeah, it is not a great name, and I really wanted to call it something else that better reflected the functionality and purpose, but many of the names were taken, so I had to settle for this one. The two C's are meant to stand for Color Contrast and nothing else.</p></dd>
-</dl>
-</li>
-<li>
-<dl>
+<p>Yeah, it is not a great name, and I really wanted to call it something else that better reflected the functionality and purpose, but many of the names were taken, so I had to settle for this one. The two C's are meant to stand for Color Contrast and nothing else.</p>
+</dd>
 <dt>'''Can I manipulate the Alpha (aka. opacity) in this app?'''</dt>
 <dd>
 <p>Codewise, the functionality is already there, and is possible, but it is not possible at this time.</p>
 <p>I might implement it in a minor update some day, but it is not a high priority, since I do not see alpha channels being used too much in designs meant for screens.</p>
 </dd>
-</dl>
-<li>
-<dl>
 <dt>'''Can I do gradients in this app?'''</dt>
 <dd>
 <p>No, gradients are not possible.</p> 
@@ -44,19 +32,11 @@
 <p>Also, gradients use more than one color, so things will get crowded in the interface.</p>
 <p>My main focus with this app is to just keep things simple for the user.</p>
 </dd>
-</dl>
-</li>
-<li>
-<dl>
 <dt>'''Can I export these colors to CSS or any other format?'''<dt>
 <dd>
 <p>No, and I do not really plan to. This app's main purpose is to allow people to quickly check if colors go well together for readability purposes.</p>
 <p>However, as long as the app is running, the RGB values and the hex code are always visible, with the hex code formatted in the manner needed for CSS, so you can take a screen shot or keep your device next to you while you work.</p>
 </dd>
-</dl>
-</li>
-<li>
-<dl>
 <dt>'''Do you plan to support CMYK or HSB color systems?'''</dt>
 <dd>
 <p>While this app <strong>can</strong> be used to help with pretty much any design, the main focus is for designs meant for the screen, which mainly use the RGB system, while CMYK used for print designs.</p>
@@ -64,8 +44,6 @@
 <p>For the purposes of this app, RGB works out the best.</p>
 </dd>
 </dl>
-</li>
-</ol>
 
 ==Notes==
 
