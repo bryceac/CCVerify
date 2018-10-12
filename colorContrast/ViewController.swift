@@ -142,23 +142,40 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // use switch statement to update colors appropriately based on the field. case 3 is the hex code field and 0-2 are the RGB values
         switch sender.tag {
         case 0, 1, 2:
-            if colorAreaController.selectedSegmentIndex == 0 {
-                updateBackgroundColor(withRed: CGFloat(Float(redValue.text!)!/Float(255)), green: CGFloat(Float(greenValue.text!)!/Float(255)), blue: CGFloat(Float(blueValue.text!)!/Float(255)))
-                getValues()
+            let alert = UIAlertController(title: "Error!", message: "Values are not numerical. Please use numeric characters.", preferredStyle: .alert) // create an alert for when values are not numerical
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil)) // add action to Alert
+            
+            // check that sent field can be converted to a float
+            if Float(sender.text!) != nil {
+                if colorAreaController.selectedSegmentIndex == 0 {
+                    updateBackgroundColor(withRed: CGFloat(Float(redValue.text!)!/Float(255)), green: CGFloat(Float(greenValue.text!)!/Float(255)), blue: CGFloat(Float(blueValue.text!)!/Float(255)))
+                    getValues()
+                } else {
+                    updateTextColor(withRed: CGFloat(Float(redValue.text!)!/Float(255)), green: CGFloat(Float(greenValue.text!)!/Float(255)), blue: CGFloat(Float(blueValue.text!)!/Float(255)))
+                    getValues()
+                }
             } else {
-                updateTextColor(withRed: CGFloat(Float(redValue.text!)!/Float(255)), green: CGFloat(Float(greenValue.text!)!/Float(255)), blue: CGFloat(Float(blueValue.text!)!/Float(255)))
-                getValues()
+                self.present(alert, animated: true, completion: nil) // display alert
             }
         case 3:
-            let HEX = removePoundSign(from: hexCode.text!)
-            let RGB = rgbHex.hexToRGB(hex: HEX) // get RGB values from hex
+            let alert = UIAlertController(title: "Error!", message: "Hex code size is not correct. String must have 6 characters", preferredStyle: .alert) // create an alert for when hex code has more or less than 6 characters after removing '#'
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil)) // add action to Alert
             
-            if colorAreaController.selectedSegmentIndex == 0 {
-                updateBackgroundColor(withRed: CGFloat(Float(RGB[0])/Float(255)), green: CGFloat(Float(RGB[1])/Float(255)), blue: CGFloat(Float(RGB[2])/Float(255)))
-                getValues()
+            let HEX = removePoundSign(from: hexCode.text!)
+            
+            // check the hex code length
+            if HEX.count == 6 {
+                let RGB = rgbHex.hexToRGB(hex: HEX) // get RGB values from hex
+            
+                if colorAreaController.selectedSegmentIndex == 0 {
+                    updateBackgroundColor(withRed: CGFloat(Float(RGB[0])/Float(255)), green: CGFloat(Float(RGB[1])/Float(255)), blue: CGFloat(Float(RGB[2])/Float(255)))
+                    getValues()
+                } else {
+                    updateTextColor(withRed: CGFloat(Float(RGB[0])/Float(255)), green: CGFloat(Float(RGB[1])/Float(255)), blue: CGFloat(Float(RGB[2])/Float(255)))
+                    getValues()
+                }
             } else {
-                updateTextColor(withRed: CGFloat(Float(RGB[0])/Float(255)), green: CGFloat(Float(RGB[1])/Float(255)), blue: CGFloat(Float(RGB[2])/Float(255)))
-                getValues()
+                self.present(alert, animated: true, completion: nil)
             }
         default: ()
         }
