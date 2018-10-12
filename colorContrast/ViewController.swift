@@ -147,6 +147,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
             
             // check that sent field can be converted to a float
             if Float(sender.text!) != nil {
+                
+                // make sure numbers stay in range of 0 to 255
+                if Float(sender.text!)! > 255.0 {
+                    sender.text = "255"
+                } else if Float(sender.text!)! < 0 {
+                    sender.text = "0"
+                }
+                
                 if colorAreaController.selectedSegmentIndex == 0 {
                     updateBackgroundColor(withRed: CGFloat(Float(redValue.text!)!/Float(255)), green: CGFloat(Float(greenValue.text!)!/Float(255)), blue: CGFloat(Float(blueValue.text!)!/Float(255)))
                     getValues()
