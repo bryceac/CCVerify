@@ -52,7 +52,7 @@ The way to use this app is pretty much straight forward. You have a preview box 
 
 One can put RGB values (numbers ranging from 0 to 255) in the first three fields or a 6-character Hex code in the bottom most text field ('#' is allowed at the beginning or end, but will ignored, even though it is present most of the time).
 
-If one tries to use a 3-character hex, things will not likely work properly or at all, as the way I have the app generating and parsing hex values does not support the shorter format.
+If one tries to use a 3-character hex, a message will be displayed.
 
 At the very top, there is a segment controller that is used to ultimately determine what has its color changed, so that only one set of UI elements are ever needed to change anything.
 
