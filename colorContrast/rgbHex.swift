@@ -40,7 +40,7 @@ class RGBHex {
         return String(from.suffix(2)) // grab the last two characters of the hex code
     }
 
-    // fixHex function is used to make sure hex codes are right, by reassign unknown characters
+    // fixHex function is used to make sure hex codes are right, by reassigning unknown characters
     func fixHex(inString: String) -> String {
     var hex = Array(inString) // convert hex string to array
 
