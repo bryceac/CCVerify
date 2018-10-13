@@ -145,7 +145,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             let alert = UIAlertController(title: "Error!", message: "Values are not numerical. Please use numeric characters.", preferredStyle: .alert) // create an alert for when values are not numerical
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil)) // add action to Alert
             
-            // check that sent field can be converted to a float
+            // check that sender field can be converted to a float
             if Float(sender.text!) != nil {
                 
                 // make sure numbers stay in range of 0 to 255
