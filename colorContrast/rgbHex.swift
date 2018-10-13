@@ -40,6 +40,20 @@ class RGBHex {
         return String(from.suffix(2)) // grab the last two characters of the hex code
     }
 
+    // fixHex function is used to make sure hex codes are right, by reassign unknown characters
+    func fixHex(inString: String) -> String {
+    var hex = Array(inString) // convert hex string to array
+
+    for i in 0..<hex.count {
+        // check if character exists in array by trying to retrieve an index
+        if hexValues.index(where: { $0.caseInsensitiveCompare(String(hex[i])) == .orderedSame}) == nil {
+            hex[i] = Character(hexValues[15]) // if character is not a valid hex character, change character to last valid hex character
+        }
+    }
+
+    return String(hex) // return the hex, regardless of outcome
+}
+
     // the following three functions actually do the work in converting the hex code to RGB values by multiplying the first character by 16 and adding the second
     func redDecimal(from: String) -> Int {
         return (hexValues.index(where: { $0.caseInsensitiveCompare(String(from.prefix(1))) == .orderedSame})! * 16) + hexValues.index(where: { $0.caseInsensitiveCompare(String(from.suffix(1))) == .orderedSame})!
@@ -55,6 +69,15 @@ class RGBHex {
 
     // hexToRGB takes a hex values and returns an Integer array with the three values contained inside
     func hexToRGB(hex: String) -> [Int] {
-        return [redDecimal(from: redHex(from: hex)), greenDecimal(from: greenHex(from: hex)), blueDecimal(from: blueHex(from: hex))]
+        // check if hex is valid by running it through a function that fixes the hex code and see if the two are the same
+        if fixHex(inString: hex).caseInsensitiveCompare(hex) == .orderedSame {
+            // send out the RGB values as an array
+            return [redDecimal(from: redHex(from: hex)), greenDecimal(from: greenHex(from: hex)), blueDecimal(from: blueHex(from: hex))]
+        } else {
+            let NEW_HEX = fixHex(inString: hex) // constant with a correct hex value
+
+            // return array based on corrected hex code
+            return [redDecimal(from: redHex(from: NEW_HEX)), greenDecimal(from: greenHex(from: NEW_HEX)), blueDecimal(from: blueHex(from: NEW_HEX))]
+        }
     }
 }
