@@ -127,14 +127,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // the following function will remove '#' from string, so conversion can be right
     func removePoundSign(from: String) -> String {
-        if from.contains("#") {
-            var hex = Array(from)
-            
-            hex.remove(at: hex.index(where: { $0 == "#"})!) // remove from wherever it might be in string
-            return String(hex)
-        } else {
-            return from
+        var hex = Array(from)
+
+        for _ in hex {
+            let INDEX = hex.index(where: { $0 == "#"})
+
+            // check if String has '#'
+            if INDEX != nil {   
+                hex.remove(at: INDEX!) // remove from wherever it might be in string
+            }
         }
+        return String(hex) // return string regardless of results
     }
     
     // function that will run when user changes data in text fields
