@@ -130,11 +130,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         var hex = Array(from)
 
         for _ in hex {
-            let INDEX = hex.index(where: { $0 == "#"})
-
-            // check if String has '#'
-            if INDEX != nil {   
-                hex.remove(at: INDEX!) // remove from wherever it might be in string
+            // check if '#' exists in String and remove it
+            if let INDEX = hex.index(where: { $0 == "#"}) {
+                hex.remove(at: INDEX) // remove from wherever it might be in string
             }
         }
         return String(hex) // return string regardless of results
