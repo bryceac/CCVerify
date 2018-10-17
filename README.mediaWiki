@@ -2,11 +2,24 @@
 
 '''Author:''' Bryce Campbell
 
-'''Version:''' 1.0
+'''Version:''' 1.0.1
 
 '''Description:''' Simple app that allows users to compare two different colors, to ensure readability on screens without the need for an Internet connection, and users can pick colors in any manner.
 
 '''License:''' See LICENSE
+
+==Version History==
+
+<dl>
+<dt>'''1.0.1'''</dt>
+<dd>
+Minor update to make things more idiot-proof when inputting hex codes, and make sure everyone runs the same code as me.
+</dd>
+<dt>'''1.0'''</dt>
+<dd>
+Initial release for iOS.
+</dd>
+</dl>
 
 ==Questions==
 
